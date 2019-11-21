@@ -1,0 +1,95 @@
+.slideshow-container {
+    max-width: 90vh;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    height: 400px;
+    /*border: solid 1px black;*/
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    margin-top: -12px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 2px 5px grey;
+}
+
+.text {
+    color: #000;
+    font-size: 15px;
+    padding: auto;
+    position: flex;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(181, 181, 181, 0.66);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: .6s ease;
+    position: flex;
+}
+
+.dots {
+    margin-top: 25vh;
+    margin-left: 85vh;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.mainBtn {
+    /*cursor: pointer;*/
+    background-color: #fff;
+    display: inline-block;
+    transition: .6s ease;
+    position: flex;
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    margin-left: 80vh;
+}
+
+.mainBtn:hover {
+    color: #fff;
+    background: #000;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 3px 3px 5px grey;
+}

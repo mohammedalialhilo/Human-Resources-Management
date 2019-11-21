@@ -1,0 +1,37 @@
+.logo {
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.055);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.active {
+    color: #f2f2f2;
+    background-color: rgba(59, 59, 59, 0.8);
+    box-shadow: 2px 2px 5px grey;
+    border-radius: 3px 3px 3px 3px;
+}
