@@ -6,7 +6,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: #fff;
 }
 
@@ -34,4 +34,28 @@ li a:hover {
     background-color: rgba(59, 59, 59, 0.8);
     box-shadow: 2px 2px 5px grey;
     border-radius: 3px 3px 3px 3px;
+}
+
+.search-container {
+    float: right;
+    margin-right: 6px;
+}
+
+.search {
+    height: 20px;
+    border-radius: 3px 3px 3px 3px;
+    background-color: rgba(128, 128, 128, 0.425);
+}
+
+.search:hover {
+    box-shadow: 1px 1px 5px grey;
+}
+
+.searchBtn {
+    height: 20px;
+    border-radius: 1px 1px 1px;
+}
+
+.searchBtn:hover {
+    box-shadow: 1px 1px 5px grey;
 }
