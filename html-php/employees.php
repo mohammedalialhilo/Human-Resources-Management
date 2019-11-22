@@ -19,14 +19,27 @@
                 <li><a class="" href="projects.php">Projects</a></li>
             </ul>
             <div class="search-container">
-                <form action="">
+                <form action="" method="POST">
                     <input class="search" type="text" placeholder="Search.." name="search">
                     <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-
         </nav>
     </header>
+
+    <?php
+    $link = mysqli_connect("localhost", "root", "", "human");
+    if (isset($_POST['submit'])) {
+        $search = $_POST['search'];
+        $result =  "SELECT * FROM `employees` WHERE  `firstname` = '$search'";
+        $respans = mysqli_query($link, $result);
+        $row = mysqli_fetch_assoc($respans);
+        if ($row){
+            
+        }
+    }
+
+    ?>
 </body>
 
 </html>
