@@ -1,0 +1,1 @@
+function addemppage() { location.replace('addemp.php') }
