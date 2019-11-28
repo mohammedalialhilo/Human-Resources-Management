@@ -22,22 +22,24 @@
             <div class="search-container">
                 <form action="employees.php" method="POST">
                     <input class="search" type="text" placeholder="Search.." name="search">
-                    <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                    <button class="searchBtn" type="submit" name="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
         </nav>
     </header>
 
     <?php
-    $link = mysqli_connect("localhost", "root", "", "human");
+    $link = mysqli_connect("localhost", "root", "", "humani");
     if (isset($_POST['submit'])) {
         $search = $_POST['search'];
-        $result =  mysql_query("SELECT * FROM `employees` 
-        LEFT JOIN `departments` ON `employees.department` = `departments.ID`
-        LEFT JOIN `sites` ON `employees.site` = `sites.ID`
-        WHERE  `firstname` like '%{$search}%' || `lastname` like '%{$search}%'");
-        if (mysql_num_rows($result) > 0) {
-            $row = mysqli_fetch_array($result);
+        $s =  "SELECT * FROM employees 
+        LEFT JOIN departments ON employees.department = departments.ID
+        LEFT JOIN sites ON employees.site = sites.ID
+        WHERE  firstname = '$search' || lastname = '$search'";
+        $result = mysqli_query($link, $s);
+        $row = mysqli_fetch_array($result);
+        if (mysqli_num_rows($result) == true){
+
             echo "<table>
                     <tr>
                         <td>Name</td>
