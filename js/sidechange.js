@@ -1,3 +1,3 @@
 function addemppage() { location.replace('addemp.php') };
 
-function addcospage() { location.replace('addcust.php') };
+function addcospage() { location.replace('addpro.php') };

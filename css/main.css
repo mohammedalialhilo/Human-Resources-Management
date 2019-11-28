@@ -1,3 +1,55 @@
+.bg-image {
+    /* The image used */
+    background-image: url("../img/grey_abstract_geometric_triangle_background-wallpaper-7680x4320.jpg");
+    /* Add the blur effect ull height */
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+      
+         z-index: -1;
+    height: 100vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.addemp{
+    position: relative;
+    top: 50%;
+}
+.bgim{
+    background-image: url("../img/grey_abstract_geometric_triangle_background-wallpaper-7680x4320.jpg");
+    height: 100vh;
+}
+.addempe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+.btns {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    margin:0 auto;
+    transition:  .6s ease;
+}
+.btns a{
+    transition: .6s ease;
+}
+
 .addBtn {
     background-color: #fff;
     display: inline-block;
@@ -15,4 +67,15 @@
     background: #000;
     border-radius: 3px 3px 3px 3px;
     box-shadow: 3px 3px 5px grey;
+}
+
+.infotable {
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.t1 {
+    background: rgba(135, 135, 135, 0.96);
 }

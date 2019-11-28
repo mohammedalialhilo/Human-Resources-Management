@@ -1,3 +1,6 @@
+.header{
+    z-index: 2;
+}
 .logo {
     float: left;
 }
@@ -20,6 +23,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: .6s ease;
 }
 
 li a:hover {
@@ -27,6 +31,7 @@ li a:hover {
     background-color: rgba(0, 0, 0, 0.055);
     border-radius: 3px 3px 3px 3px;
     box-shadow: 2px 2px 5px grey;
+    transition: .6s ease;
 }
 
 .active {
@@ -34,6 +39,7 @@ li a:hover {
     background-color: rgba(59, 59, 59, 0.8);
     box-shadow: 2px 2px 5px grey;
     border-radius: 3px 3px 3px 3px;
+    transition: .6s ease;
 }
 
 .search-container {

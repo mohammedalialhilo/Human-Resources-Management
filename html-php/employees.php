@@ -11,8 +11,8 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
+<body class="bgim">
+    <header >
         <nav>
             <ul>
                 <li><a class="active" href="employees.php">Employees</a></li>
@@ -26,8 +26,8 @@
                 </form>
             </div>
         </nav>
+       
     </header>
-
     <?php
     $link = mysqli_connect("localhost", "root", "", "humani");
     if (isset($_POST['submit'])) {
@@ -40,28 +40,27 @@
         $row = mysqli_fetch_array($result);
         if (mysqli_num_rows($result) == true){
 
-            echo "<table>
-                    <tr>
+            echo "<table class='infotable'>
+                    <tr class='t1'>
                         <td>Name</td>
                         <td>".$row['firstname']." ".$row['lastname'] ."</td>
                     </tr>
-                    <tr>
+                    <tr class='t2'>
                         <td>Salary</td>
                         <td>".$row['salary']."</td>
                     </tr>
-                    <tr>
-                        <td>Address</td>
+                    <tr class='t1'>                        <td>Address</td>
                         <td>".$row['adress']." ".$row['zipcode']." ".$row['city']." ".$row['country']."</td>
                     </tr>
-                    <tr>
+                    <tr class='t2'>
                         <td>Email</td>
                         <td>".$row['email']."</td>
                     </tr>
-                    <tr>
+                    <tr class='t1'>
                         <td>Department</td>
                         <td>".$row['department']."</td>
                     </tr>
-                    <tr>
+                    <tr class='t2'>
                         <td>Site</td>
                         <td>".$row['sitename']."</td>
                     </tr>

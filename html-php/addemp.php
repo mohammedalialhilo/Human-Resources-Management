@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="bgim">
     <header>
         <nav>
             <ul>
@@ -27,29 +27,45 @@
             </div>
         </nav>
     </header>
-
-    <form action="addemp.php" method="POST">
+    <div class="addempe">
+    <form action="addemp.php" method="POST" class="addemp">
         <input class="name" type="name" name="firstname" placeholder="Firstname">
         <input class="name" type="name" name="lastname" placeholder="lastname">
         <input class="name" type="address" name="address" placeholder="Address">
         <input class="name" type="zipcode" name="zipcode" placeholder="zipcode">
         <input class="name" type="city" name="city" placeholder="City">
+        <input class="name" type="country" name="country" placeholder="Country">
         <input class="name" type="email" name="email" placeholder="Email">
         <input class="name" type="date" name="birthday" placeholder="Birthday">
         <input class="name" type="name" name="department" placeholder="Department">
         <input class="name" type="name" name="site" placeholder="Site">
         <input class="name" type="int" name="salary" placeholder="Salary">
-        <input class="name" type="submit" name="submit">
+        <input  type="submit" name="submit" value="ADD">
     </form>
+    </div>
     <?php
-    $link = mysqli_connect("localhost", "root", "", "human");
+    $link = mysqli_connect("localhost", "root", "", "humani");
     if (isset($_POST['submit'])) {
         if (!isset($_POST['firstname']) || !isset($_POST['lastname']) || !isset($_POST['address']) || !isset($_POST['zipcode']) || !isset($_POST['city']) || !isset($_POST['email']) || !isset($_POST['birthday']) || !isset($_POST['department']) || !isset($_POST['site']) || !isset($_POST['salary'])) {
             echo "Please enter the information!";
             exit;
         } else {
-            
-         }
+            $firstname = $_POST['firstname'];
+            $lastname = $_POST['lastname'];
+            $address = $_POST['address'];
+            $city = $_POST['city'];
+            $email = $_POST['email'];
+            $birthday = $_POST['birthday'];
+            $department = $_POST['department'];
+            $site = $_POST['site'];
+            $salary = $_POST['salary'];
+            $country = $_POST['country'];
+
+            $sql = "INSERT INTO employees (firstname, lastname, department, site, adress, zipcode, city, country, salary,birthday, email) VALUES ('$firstname', '$lastname', '$department', '$site', '$address', '$zipcode', '$city','$country', '$salary', '$birthday', '$email') ";
+            if (mysqli_query($link, $sql)) {
+                echo "<br>Info added";
+                }
+        }
     }
     ?>
 </body>

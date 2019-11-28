@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="bgim">
     <header>
         <nav>
             <ul>
@@ -68,7 +68,7 @@
         }
     }
     ?>
-    <button class="addBtn" type="button" onclick="addcospage()">Add new employee</button>
+    <button class="addBtn" type="button" onclick="addpropage()">Add new project</button>
 
 </body>
 <script src="../js/sidechange.js"></script>
